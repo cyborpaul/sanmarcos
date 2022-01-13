@@ -2,7 +2,7 @@
 include "config.php";
 
 // Encrypt cookie
-function encryptCookie( $userid ) {
+/* function encryptCookie( $userid ) {
    
     $key = hex2bin(openssl_random_pseudo_bytes(4));
 
@@ -24,7 +24,7 @@ function decryptCookie( $ciphertext ) {
     list($encrypted_data, $iv,$key) = explode('::', base64_decode($ciphertext));
     return openssl_decrypt($encrypted_data, $cipher, $key, 0, $iv);
 
-}
+} */
 
 
 // Check if $_SESSION or $_COOKIE already set
@@ -33,8 +33,8 @@ if( isset($_SESSION['userid']) ){
    exit;
 }else if( isset($_COOKIE['rememberme']  )){
     
-    // Decrypt cookie variable value
-    $userid = decryptCookie($_COOKIE['rememberme']);
+/*     // Decrypt cookie variable value
+    $userid = decryptCookie($_COOKIE['rememberme']); */
         
     // Fetch records
     $stmt = $conn->prepare("SELECT count(*) as cntUser FROM users WHERE id=:id");
@@ -76,7 +76,7 @@ if(isset($_POST['but_submit'])){
 
                 // Set cookie variables
                 $days = 30;
-                $value = encryptCookie($userid);
+              /*   $value = encryptCookie($userid); */
 
                 setcookie ("rememberme",$value,time()+ ($days *  24 * 60 * 60 * 1000));
                 
