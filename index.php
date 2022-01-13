@@ -24,8 +24,6 @@ if(isset($_POST['but_submit'])){
 
  */
 
-include "config.php";
-
 // Encrypt cookie
 function encryptCookie( $userid ) {
    
@@ -106,7 +104,7 @@ if(isset($_POST['but_submit'])){
             }
             
             $_SESSION['userid'] = $userid; 
-            header('Location: main.php');
+            echo '<script>location.href="main.php"</script>';
             exit;
         }else{
             echo "Invalid username and password";
