@@ -1,5 +1,7 @@
 <?php
+
 include "config.php";
+echo '<script>location.href="sensores.php"</script>';
 /* 
 if(isset($_POST['but_submit'])){
   $username=$_POST['txt_uname'];
