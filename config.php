@@ -3,7 +3,7 @@
 session_start();
 $server = "localhost";
 $username = "root";
-$password = "";
+$password = "RPJsh8E4a9#C9v";
 $dbname = "sanmarcos";
 
 // Create connection
