@@ -54,7 +54,7 @@ function decryptCookie( $ciphertext ) {
 
 // Check if $_SESSION or $_COOKIE already set
 if( isset($_SESSION['userid']) ){
-   header('Location: home.php');
+  echo '<script>location.href="home.php"</script>';
    exit;
 }else if( isset($_COOKIE['rememberme']  )){
     
