@@ -91,7 +91,7 @@ if(isset($_POST['but_submit'])){
 
     }
 
-    echo var_dump($_SESSION);
+    echo error_reporting();
 
 }
 
