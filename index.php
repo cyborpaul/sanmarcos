@@ -63,8 +63,9 @@ if(isset($_POST['but_submit'])){
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->bindValue(':password', $password, PDO::PARAM_STR);
         $stmt->execute(); 
-        echo var_dump($stmt);
+        
         $record = $stmt->fetch(); 
+        echo var_dump($record);
     
         $count = $record['cntUser'];
 
