@@ -4,7 +4,7 @@ session_start();
 $server = "localhost";
 $username = "root";
 $password = "RPJsh8E4a9#C9v";
-$dbname = "sanmarcos";
+$dbname = "db_recordarme";
 
 // Create connection
 try{

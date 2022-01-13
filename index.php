@@ -1,8 +1,33 @@
 <?php
 include "config.php";
+/* 
+if(isset($_POST['but_submit'])){
+  $username=$_POST['txt_uname'];
+	$pass=$_POST['txt_pwd'];
+  $query="SELECT * FROM usuarios WHERE username='$username'";
+	$sql=mysqli_query($mysqli,$query);
+	if($f=mysqli_fetch_assoc($sql )){
+		if($pass==$f['password']){
+			$_SESSION['id']=$f['id'];
+			$_SESSION['name']=$f['name'];
+			//echo '<script>alert("BIENVENIDO IDENTIARBOL")</script> ';
+			echo '<script>location.href="main.php"</script>';
+			//header("Location: starter.php"); 
+		}else{
+			echo '<div class="alert alert-danger" role="alert">Contraseña incorrecta.</div> ';			
+		}		
+	}else{		
+		echo '<div class="alert alert-danger" role="alert">Este usuario no existe. Por favor registrese para poder ingresar.</div>';			
+	}
+
+}
+
+ */
+
+include "config.php";
 
 // Encrypt cookie
-/* function encryptCookie( $userid ) {
+function encryptCookie( $userid ) {
    
     $key = hex2bin(openssl_random_pseudo_bytes(4));
 
@@ -24,7 +49,7 @@ function decryptCookie( $ciphertext ) {
     list($encrypted_data, $iv,$key) = explode('::', base64_decode($ciphertext));
     return openssl_decrypt($encrypted_data, $cipher, $key, 0, $iv);
 
-} */
+}
 
 
 // Check if $_SESSION or $_COOKIE already set
@@ -33,8 +58,8 @@ if( isset($_SESSION['userid']) ){
    exit;
 }else if( isset($_COOKIE['rememberme']  )){
     
-/*     // Decrypt cookie variable value
-    $userid = decryptCookie($_COOKIE['rememberme']); */
+    // Decrypt cookie variable value
+    $userid = decryptCookie($_COOKIE['rememberme']);
         
     // Fetch records
     $stmt = $conn->prepare("SELECT count(*) as cntUser FROM users WHERE id=:id");
@@ -44,7 +69,7 @@ if( isset($_SESSION['userid']) ){
 
     if( $count > 0 ){
         $_SESSION['userid'] = $userid; 
-        header('Location: main.php');
+        echo '<script>location.href="main.php"</script>';
         exit;
     }
 }
@@ -63,9 +88,7 @@ if(isset($_POST['but_submit'])){
         $stmt->bindValue(':username', $username, PDO::PARAM_STR);
         $stmt->bindValue(':password', $password, PDO::PARAM_STR);
         $stmt->execute(); 
-        
         $record = $stmt->fetch(); 
-        echo var_dump($record);
     
         $count = $record['cntUser'];
 
@@ -76,7 +99,7 @@ if(isset($_POST['but_submit'])){
 
                 // Set cookie variables
                 $days = 30;
-              /*   $value = encryptCookie($userid); */
+                $value = encryptCookie($userid);
 
                 setcookie ("rememberme",$value,time()+ ($days *  24 * 60 * 60 * 1000));
                 
@@ -91,9 +114,8 @@ if(isset($_POST['but_submit'])){
 
     }
 
-    echo error_reporting();
-
 }
+
 
 ?>
 <!DOCTYPE html>
