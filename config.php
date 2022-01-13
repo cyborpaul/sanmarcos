@@ -2,7 +2,7 @@
 session_start();
 $server = "localhost";
 $username = "root";
-$password = "RPJsh8E4a9#C9v";
+$password = "";
 $dbname = "sanmarcos";
 
 // Create connection
@@ -12,3 +12,5 @@ try{
 }catch(PDOException $e){
    die('Unable to connect with the database');
 }
+
+echo var_dump($conn);
