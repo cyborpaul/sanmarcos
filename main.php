@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include "config.php";
 ?>
 <!DOCTYPE html>
@@ -52,20 +53,12 @@ include "config.php";
       
     <?php
 
-    // Check user login or not
-    if(!isset($_SESSION['userid'])){
-        header('Location: index.php');
-    }
-
     // logout
     if(isset($_POST['but_logout'])){
+
         session_destroy();
+        header("location:index.php");
 
-        // Remove cookie variables
-        $days = 30;
-        setcookie ("rememberme","", time() - ($days *  24 * 60 * 60 * 1000) );
-
-        header('Location: index.php');
     }
     ?>
         <form method='post' action="">
