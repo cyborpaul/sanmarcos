@@ -23,10 +23,6 @@ if(isset($_POST['but_submit'])){
 
 }
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es" class="h-100">
