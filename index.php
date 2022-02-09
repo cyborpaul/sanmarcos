@@ -6,10 +6,10 @@ include "config.php";
 if(isset($_POST['but_submit'])){
   $username=$_POST['txt_uname'];
 	$pass=$_POST['txt_pwd'];
-  $query="SELECT * FROM usuarios WHERE username='$username'";
+  $query="SELECT * FROM usuarios WHERE email='$username'";
 	$sql=mysqli_query($mysqli,$query);
-	if($f=mysqli_fetch_assoc($sql )){
-		if($pass==$f['password']){
+	if($f=mysqli_fetch_assoc($sql)){
+		if(password_verify($pass, $f['password'])){
 			$_SESSION['id']=$f['id'];
 			//echo '<script>alert("BIENVENIDO IDENTIARBOL")</script> ';
 			echo '<script>location.href="main.php"</script>';
