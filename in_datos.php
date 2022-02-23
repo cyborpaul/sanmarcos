@@ -1,7 +1,9 @@
 <?php
 
-$dato= $_GET['dato'];
+$dato= $_POST['dato'];
 require("config.php");
 mysqli_query($mysqli,"INSERT INTO datos (dato) VALUES('$dato')");
+
+
 
 ?>
