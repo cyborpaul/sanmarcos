@@ -32,7 +32,7 @@
 	} */
 	
 	//Insertar registro
-	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$sql = "INSERT INTO datos (dato) VALUES(:cuenta)";
 		$stmt = $pdo->prepare($sql);
