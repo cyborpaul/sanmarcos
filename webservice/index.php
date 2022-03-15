@@ -36,7 +36,7 @@
 	{
 		$sql = "INSERT INTO datos (dato) VALUES(:cuenta)";
 		$stmt = $pdo->prepare($sql);
-		$stmt->bindValue(':cuenta', $_POST['cuenta']);
+		$stmt->bindValue(':cuenta', $_GET['cuenta']);
 		$stmt->execute();
 		$idPost = $pdo->lastInsertId(); 
 		if($idPost)
