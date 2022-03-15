@@ -6,7 +6,7 @@ include "config.php";
 if(isset($_POST['but_submit'])){
   $username=$_POST['txt_uname'];
 	$pass=$_POST['txt_pwd'];
-  $query="SELECT * FROM usuarios WHERE email='$username'";
+  $query="SELECT * FROM sanmarcos_usuarios WHERE usu_txt_email='$username'";
 	$sql=mysqli_query($mysqli,$query);
 	if($f=mysqli_fetch_assoc($sql)){
 		if(password_verify($pass, $f['password'])){

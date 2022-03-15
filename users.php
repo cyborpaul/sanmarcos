@@ -27,18 +27,18 @@ require 'components/header.general.php';
                   </thead>
                   <tbody>
                     <?php
-                      $query = "SELECT * FROM usuarios";
+                      $query = "SELECT * FROM sanmarcos_usuarios";
                       require 'config.php';                    
                       $result_tasks = mysqli_query($mysqli, $query);
                       $contador=1;
                       while($row = mysqli_fetch_assoc($result_tasks)) {
                     ?>
                   <tr>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['lastname']; ?></td>
-                    <td><?php echo $row['nickname']; ?></td>
-                    <td><?php echo $row['rol']; ?></td>
+                    <td><?php echo $row['usu_txt_email']; ?></td>
+                    <td><?php echo $row['usu_txt_name']; ?></td>
+                    <td><?php echo $row['usu_txt_lastname']; ?></td>
+                    <td><?php echo $row['usu_txt_nickname']; ?></td>
+                    <td><?php echo $row['usu_txt_rol']; ?></td>
                     <td>Entrar</td>
                   </tr>
                   <?php $contador++;} ?>

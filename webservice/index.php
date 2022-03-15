@@ -32,11 +32,11 @@
 	} */
 	
 	//Insertar registro
-	if($_SERVER['REQUEST_METHOD'] == 'GET')
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		$sql = "INSERT INTO datos (dato) VALUES(:cuenta)";
 		$stmt = $pdo->prepare($sql);
-		$stmt->bindValue(':cuenta', $_GET['cuenta']);
+		$stmt->bindValue(':cuenta', $_POST['cuenta']);
 		$stmt->execute();
 		$idPost = $pdo->lastInsertId(); 
 		if($idPost)
