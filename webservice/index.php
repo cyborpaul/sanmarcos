@@ -32,11 +32,15 @@
 	} */
 	
 	//Insertar registro
-	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
-		$sql = "INSERT INTO datos (dato) VALUES(:cuenta)";
+		$sql = "INSERT INTO sanmarcos_datos (dat_txt_datos, nod_int_id, par_int_id, par_txt_Fecha) VALUES(:cuenta,:nodo,:parametro, :fecha)";
+		$fecha=date("Y-m-d H:i:s");
 		$stmt = $pdo->prepare($sql);
-		$stmt->bindValue(':cuenta', $_POST['cuenta']);
+		$stmt->bindValue(':cuenta', $_GET['cuenta']);
+		$stmt->bindValue(':nodo', $_GET['nodo']);
+		$stmt->bindValue(':parametro', $_GET['parametro']);
+		$stmt->bindValue(':fecha', $fecha);
 		$stmt->execute();
 		$idPost = $pdo->lastInsertId(); 
 		if($idPost)

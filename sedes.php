@@ -1,15 +1,14 @@
 <?php
 require 'components/header.general.php';
 ?>
-
     <!--Container Main start-->
     <div class="height-100 bg-light">
     <div class="card">
               <div class="card-header">
                 <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
-                <h3 class="card-title">Control de nodos sensores en el sistema</h3>
-                  <a href="nodos.php"><button class="btn btn-success">Crear nuevo nodo sensor <i class="bx bx-plus nav_icon"></i></button></a>
+                <h3 class="card-title">Control de sedes en el sistema</h3>
+                  <a href="sede_register.php"><button class="btn btn-success">Nueva sede <i class="bx bx-plus nav_icon"></i></button></a>
                 </div>
                 
               </div>
@@ -18,29 +17,29 @@ require 'components/header.general.php';
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Nodo nombre</th>
-                    <th>Nodo descripción</th>
-                    <th>Nodo latitud</th>
-                    <th>Nodo longitud</th>
-                    <th>Nodo distrito</th>
-                    <th>Opciones Avanzadas</th>
+                    <th>Intitución</th>
+                    <th>Responsable</th>
+                    <th>Contacto</th>
+                    <th>Correo</th>
+                    <th>Celular</th>
+                    <th>Descripción</th>
                   </tr>
                   </thead>
                   <tbody>
                     <?php
-                      $query = "SELECT * FROM sanmarcos_nodo";
+                      $query = "SELECT * FROM sanmarcos_sedes";
                       require 'config.php';                    
                       $result_tasks = mysqli_query($mysqli, $query);
                       $contador=1;
                       while($row = mysqli_fetch_assoc($result_tasks)) {
                     ?>
                   <tr>
-                    <td><?php echo $row['nod_txt_name']; ?></td>
-                    <td><?php echo $row['nod_txt_description']; ?></td>
-                    <td><?php echo $row['nod_double_latitud']; ?></td>
-                    <td><?php echo $row['nod_double_longitud']; ?></td>
-                    <td><?php echo $row['nod_txt_distrito']; ?></td>
-                    <td><a href="mapa.php">Ver en mapa</a></td>
+                    <td><?php echo $row['sed_txt_institucion']; ?></td>
+                    <td><?php echo $row['sed_txt_responsable']; ?></td>
+                    <td><?php echo $row['sed_txt_contacto']; ?></td>
+                    <td><?php echo $row['sed_txt_correo']; ?></td>
+                    <td><?php echo $row['sed_txt_celular']; ?></td>
+                    <td><?php echo $row['sed_txt_descripcion']; ?></td>
                   </tr>
                   <?php $contador++;} ?>
                   
@@ -81,13 +80,6 @@ require 'components/header.general.php';
 <script>
   $(function () {
     $("#example1").DataTable({
-      "language": {
-            "lengthMenu": "Display _MENU_ records per page",
-            "zeroRecords": "Nothing found - sorry",
-            "info": "Resultados _PAGE_ de _PAGES_",
-            "infoEmpty": "No records available",
-            "infoFiltered": "(filtered from _MAX_ total records)"},
-      
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
@@ -104,5 +96,3 @@ require 'components/header.general.php';
 </script>    
 </body>
 </html>
-
-    

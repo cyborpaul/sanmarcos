@@ -29,11 +29,11 @@ include "config.php";
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">SM - UNMSM</span> </a>
-                <div class="nav_list"> <a href="main.php" class="nav_link active"><i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Página principal</span> </a> 
-                <a href="users.php" class="nav_link"><i class='bx bx-user nav_icon'></i> <span class="nav_name">Usuarios</span> </a> 
-                <a href="sensores.php" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Sensores</span> </a> 
-                <a href="estadisticas.php" class="nav_link"><i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Estadisticas</span> </a> 
-                <a href="fotos.php" class="nav_link"><i class='bx bx-folder nav_icon'></i> <span class="nav_name">Fotos</span> </a> 
+                <div class="nav_list"> <a href="main.php" class="nav_link active"><i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Ver sensores</span> </a> 
+                <a href="users.php" class="nav_link"><i class='bx bx-user nav_icon'></i> <span class="nav_name">Gestión de usuarios</span> </a> 
+                <a href="sensores.php" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Gestión de nodo</span> </a> 
+                <a href="sedes.php" class="nav_link"><i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Gestión de sede</span> </a> 
+                <a href="fotos.php" class="nav_link"><i class='bx bx-folder nav_icon'></i> <span class="nav_name">Gestión de variables</span> </a> 
                 <a href="bitacora.php" class="nav_link"><i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Bitácora</span> </a> </div>
 <?php
 if(isset($_POST['but_logout'])){

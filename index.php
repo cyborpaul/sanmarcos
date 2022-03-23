@@ -9,8 +9,8 @@ if(isset($_POST['but_submit'])){
   $query="SELECT * FROM sanmarcos_usuarios WHERE usu_txt_email='$username'";
 	$sql=mysqli_query($mysqli,$query);
 	if($f=mysqli_fetch_assoc($sql)){
-		if(password_verify($pass, $f['password'])){
-			$_SESSION['id']=$f['id'];
+		if(password_verify($pass, $f['usu_txt_password'])){
+			$_SESSION['usu_int_id']=$f['usu_int_id'];
 			//echo '<script>alert("BIENVENIDO IDENTIARBOL")</script> ';
 			echo '<script>location.href="main.php"</script>';
 			//header("Location: starter.php"); 

@@ -1,11 +1,7 @@
 <?php
 
-$dato= $_GET['dato'];
-require("config.php");
-mysqli_query($mysqli,"INSERT INTO datos (dato) VALUES('$dato')");
-
-json_encode("INGRESADO");
-
+$fecha=date("Y-m-d H:i:s");
+echo $fecha;
 
 
 ?>

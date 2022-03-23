@@ -20,8 +20,6 @@ require("config.php");
 $sql="INSERT INTO `sanmarcos_nodo`(`nod_txt_name`, `nod_txt_description`, `nod_double_latitud`, `nod_double_longitud`, `nod_txt_distrito`, `nod_txt_provincia`, `nod_txt_region`, `nod_int_habilitado`, `nod_date_registro`, `nod_date_actualizacion`) VALUES ('$nod_name','$nod_description','$nod_latitud','$nod_longitud','$nod_distrito,'$nod_provincia','$nod_region','$nod_habilitado','$nod_registro','$nod_actualizacion')";
 $ejecutado=mysqli_query($mysqli,"INSERT INTO sanmarcos_nodo (nod_txt_name, nod_txt_description, nod_double_latitud, nod_double_longitud, nod_txt_distrito, nod_txt_provincia, nod_txt_region,nod_int_habilitado, nod_date_registro, nod_date_actualizacion) VALUES ('$nod_name','$nod_description','$nod_latitud','$nod_longitud','$nod_distrito','$nod_provincia','$nod_region','$nod_habilitado','$nod_registro','$nod_actualizacion')");
 
-var_dump($sql);
-var_dump($ejecutado);
 if($ejecutado>0){
     echo "Subido";
 }else{
