@@ -77,6 +77,12 @@ require 'components/header.general.php';
 
 
 <script>
+    $(document).ready(function(){
+        setInterval(function(){			
+        allData();
+               	
+	    }, 2000)
+    });
  
  function allData(){
         $.ajax({
