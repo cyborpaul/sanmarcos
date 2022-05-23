@@ -125,16 +125,23 @@ require 'components/header.general.php';
                                               "</tr>"+
                                               "<tr>"+
                                                 "<td>3.</td>"+
-                                                "<td>Radiación ultravioleta</td>"+
+                                                "<td>Turbidez agua</td>"+
                                                 "<td>"+
-                                                  value.case_rayos_uv+ " mW/cm^2"+ 
+                                                  value.case_turdidez+ "UMC"+ 
                                                 "</td>"+
                                               "</tr>"+
                                               "<tr>"+
                                                 "<td>4.</td>"+
-                                                "<td>CO2</td>"+
+                                                "<td>Temperatura ambiente</td>"+
                                                 "<td>"+
-                                                  value.case_co2+ " ppm"+
+                                                  value.case_temperaturaambiente+ " ppm"+
+                                                "</td>"+
+                                              "</tr>"+
+                                              "<tr>"+
+                                                "<td>4.</td>"+
+                                                "<td>Ph del agua</td>"+
+                                                "<td>"+
+                                                  value.case_ph+ "cc"+
                                                 "</td>"+
                                               "</tr>"+
                                             "</tbody>"+

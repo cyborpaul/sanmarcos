@@ -18,13 +18,9 @@ $sql = sprintf("SELECT * FROM sanmarcos_monitoreo sm
                     'nod_txt_name' => $rows['nod_txt_name'],
                     'case_temperatura' => $rows['mon_double_temperatura'],
                     'case_humedad' => $rows['mon_double_humedad'],
-                    'case_rayos_uv' => $rows['mon_double_radiacion'],
-                    'case_co2' => $rows['mon_double_co2'],
-                    'case_humo' => $rows['mon_double_humo'],
-                    'case_glp' => $rows['mon_double_glp'],
-                    'case_gas' => $rows['mon_double_gas2asd'],
-                    'case_latitud' => $rows['mon_double_latitud'],
-                    'case_longitud' => $rows['mon_double_longitud'],
+                    'case_humedad' => $rows['mon_double_turbidez'],
+                    'case_temperaturamabiente' => $rows['mon_double_temperaturaambiente'],
+                    'case_ph' => $rows['mon_varchar_ph'],
                     'case_registro' => $rows['mon_date_registro']
 					);
 	}
