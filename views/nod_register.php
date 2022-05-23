@@ -26,11 +26,11 @@
 
                   <div class="form-group">
                     <label for="user">Latitud</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellidos" name="nodo_latitud">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Latitud" name="nodo_latitud">
                   </div>
                   <div class="form-group">
                     <label for="user">Longitud</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="alias" name="nodo_longitud">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Longitud" name="nodo_longitud">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Region</label>
@@ -38,11 +38,11 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Provincia</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="nodo_provincia">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Provincia" name="nodo_provincia">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Distrito</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="nodo_distrito">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Distrito" name="nodo_distrito">
                   </div>
 
                   <div class="form group">

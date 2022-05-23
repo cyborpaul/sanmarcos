@@ -84,7 +84,7 @@ require 'components/header.general.php';
 	    }, 2000)
     });
  
- function allData(){
+    function allData(){
         $.ajax({
             type:"GET",
             datatype:'json',

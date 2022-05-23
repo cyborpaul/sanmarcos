@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\sql_injection_subst;
-
 $nod_name=$_POST['nodo_name'];
 $nod_description=$_POST['nodo_description'];
 $nod_latitud=$_POST['nodo_latitud'];
