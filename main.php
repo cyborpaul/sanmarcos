@@ -127,21 +127,21 @@ require 'components/header.general.php';
                                                 "<td>3.</td>"+
                                                 "<td>Turbidez agua</td>"+
                                                 "<td>"+
-                                                  value.case_turdidez+ "UMC"+ 
+                                                  value.case_turbi+ " NTU"+ 
                                                 "</td>"+
                                               "</tr>"+
                                               "<tr>"+
                                                 "<td>4.</td>"+
                                                 "<td>Temperatura ambiente</td>"+
                                                 "<td>"+
-                                                  value.case_temperaturaambiente+ " ppm"+
+                                                  value.case_tempera+ " °C"+
                                                 "</td>"+
                                               "</tr>"+
                                               "<tr>"+
                                                 "<td>4.</td>"+
                                                 "<td>Ph del agua</td>"+
                                                 "<td>"+
-                                                  value.case_ph+ "cc"+
+                                                  value.case_ph+ " ph"+
                                                 "</td>"+
                                               "</tr>"+
                                             "</tbody>"+

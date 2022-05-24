@@ -18,8 +18,8 @@ $sql = sprintf("SELECT * FROM sanmarcos_monitoreo sm
                     'nod_txt_name' => $rows['nod_txt_name'],
                     'case_temperatura' => $rows['mon_double_temperatura'],
                     'case_humedad' => $rows['mon_double_humedad'],
-                    'case_turbidez' => $rows['mon_double_turbidez'],
-                    'case_temperaturamabiente' => $rows['mon_double_temperaturaambiente'],
+                    'case_turbi' => $rows['mon_double_turbidez'],
+                    'case_tempera' => $rows['mon_double_temperaturaambiente'],
                     'case_ph' => $rows['mon_varchar_ph'],
                     'case_registro' => $rows['mon_date_registro']
 					);
