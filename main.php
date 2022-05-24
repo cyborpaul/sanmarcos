@@ -97,8 +97,13 @@ require 'components/header.general.php';
                                   "<div class='card'>"+
                                     "<div class='card-content'>"+
                                       "<h4 class='card-title'>"+
-                                        "<a href='http://www.fostrap.com/'>"+value.nod_txt_name+"</a>"+
-                                      "</h4>"+                                      
+                                        "<a href='http://www.fostrap.com/'>"+value.nod_txt_name+
+                                        
+                                        "</a>"+
+                                      "</h4>"+ 
+                                      "<h6 style='color:green;'>"+
+                                        "<strong>Ultima modificación:</strong> "+value.case_registro+
+                                      "</h6>"+                                     
                                       "<div class=''>"+
                                           "<table class='table table-striped'>"+
                                             "<thead>"+

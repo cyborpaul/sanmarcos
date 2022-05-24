@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
 <?php
 	/*
 		Web Service RESTful en PHP con MySQL (CRUD)
@@ -46,7 +34,7 @@
 	//Insertar registro
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
-		$sql = "INSERT INTO `sanmarcos_monitoreo`(`mon_double_temperatura`, `mon_double_humedad`, `mon_double_latitud`, `mon_double_longitud`, `nod_int_id`, `mon_date_registro`) VALUES (:temperatura, :ta, :humedad, :turbidez, :ph, :nodo, :registro)";
+		$sql = "INSERT INTO `sanmarcos_monitoreo`(`mon_double_temperatura`, `mon_double_temperaturaambiente`, `mon_double_humedad`, `mon_double_turbidez`, `mon_varchar_ph`, `nod_int_id`, `mon_date_registro`) VALUES (:temperatura, :ta, :humedad, :turbidez, :ph, :nodo, :registro)";
 		$fecha=date("Y-m-d H:i:s");
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':temperatura', $_GET['temperatura']);
@@ -64,6 +52,17 @@
 			echo json_encode($idPost);
 			exit;
 		}
+/* 	$sql = "INSERT INTO datos (dato) VALUES(:cuenta)";
+		$stmt = $pdo->prepare($sql);
+		$stmt->bindValue(':cuenta', $_GET['cuenta']);
+		$stmt->execute();
+		$idPost = $pdo->lastInsertId(); 
+		if($idPost)
+		{
+			header("HTTP/1.1 200 Ok");
+			echo json_encode($idPost);
+			exit;
+		}  */
 	}
 	
 	//Actualizar registro
