@@ -35,7 +35,9 @@
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$sql = "INSERT INTO `sanmarcos_monitoreo`(`mon_double_temperatura`, `mon_double_temperaturaambiente`, `mon_double_humedad`, `mon_double_turbidez`, `mon_varchar_ph`, `nod_int_id`, `mon_date_registro`) VALUES (:temperatura, :ta, :humedad, :turbidez, :ph, :nodo, :registro)";
-		$fecha=date("Y-m-d H:i:s");
+		$zonahoraria="-5";
+		$formato="Y-m-d H:i:s a";
+		$fecha=gmdate($formato, time()+($zonahoraria*3600));
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':temperatura', $_GET['temperatura']);
 		$stmt->bindValue(':ta', $_GET['ta']);
