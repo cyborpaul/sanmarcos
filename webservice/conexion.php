@@ -9,7 +9,7 @@
 		private $hostBd = 'localhost';
 		private $nombreBd = 'sanmarcos';
 		private $usuarioBd = 'root';
-		private $passwordBd = 'Jarvis@3000';
+		private $passwordBd = 'warhammer';
 		
 		public function __construct()
 		{
